@@ -1,6 +1,5 @@
 "use strict";
 
-console.log(document.querySelector(".score"));
 const secretNumber = Math.round(Math.random() * 30);
 let score = 20;
 document.querySelector("#number").textContent = secretNumber;
