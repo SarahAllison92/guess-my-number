@@ -4,7 +4,7 @@ const secretNumber = Math.round(Math.random() * 30);
 let score = 20;
 document.querySelector("#number").textContent = secretNumber;
 
-function onClick() {
+function onClick1() {
   const guess = Number(document.querySelector("#number-input").value);
   console.log(guess, typeof guess);
 
@@ -48,4 +48,4 @@ function onClick() {
 }
 
 const clickBtn1 = document.querySelector("#check-btn");
-clickBtn1.addEventListener("click", onClick);
+clickBtn1.addEventListener("click", onClick1);
