@@ -36,17 +36,12 @@ function onClick1() {
     }
 
     number.textContent = secretNumber;
-  } else if (guess > secretNumber) {
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      msg.textContent = "Sorry, That's too high ...";
-      score--;
-      scoreNum.textContent = score;
-    } else {
-      msg.textContent = "You lose the game, Sorry";
-    }
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      msg.textContent = "Sorry, That's too low ...";
+      msg.textContent =
+        guess < secretNumber
+          ? "Sorry, That's too low ..."
+          : "Sorry, That's too high ...";
       score--;
       scoreNum.textContent = score;
     } else {
@@ -70,7 +65,7 @@ function onClick2() {
   msg.textContent = "Start Guessing....";
   scoreNum.textContent = "20";
   number.textContent = "?";
-  input.textContent = "";
+  input.value = "";
 
   head.style.backgroundColor = "#464B55";
   h1.style.color = "#fff";
