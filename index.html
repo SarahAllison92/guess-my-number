@@ -25,33 +25,40 @@
     <title>Guess My Number</title>
   </head>
   <body>
-    <div class="heading py-5 text-light shadow text-center" id="heading">
+    <div class="heading py-4 text-light shadow text-center" id="heading">
       <div class="container">
             <h1 class="display-1">Guess My Number</h1>
             <h2 class="display-5">Between 1-30</h2>
+     
       </div>
     </div>
-    <div class="input text-center">
-      <input type="number" autocomplete="off" class="number-input" id="number-input"/>
-    <button class="check-btn btn" id="check-btn">Check</button>
-    </div>
+   
     
-
     <div class="container">
+
+
       <div class="row text-center">
-        <div class="col display-5 mt-5" id="msg">
+
+          <div class="col">
+            <input type="number" autocomplete="off" class="number-input" id="number-input"/>
+               <button class="check-btn btn" id="check-btn">Check</button>
+               <button class="again-btn btn" id="again-btn" onClick="window.location.reload()">Retry</button>
+         </div>
+
+
+  <div class="col">
+        <div class="display-4 mt-5" id="msg">
           Start Guessing....
+        </div>
             <div class="number" id="number">?</div>
-        </div>
-      
+            
+          <p class="score mt-2 mb-0" id="score">Score: <span id="score-num">20</span>  </p>
+          <p class="high-score " id="high-score"><i class="bi bi-award"></i> High Score:
+          <span id="high-score-num">30</span></p>
+        
+  </div>
 
-        <div class="col mt-4">
-          <p class="score display-6" id="score">Score: <span id="score-num">20</span>  </p>
-          <p class="high-score display-6 mt-4 mb-4" id="high-score"><i class="bi bi-award"></i> High Score: <span id="high-score-num">30</span></p>
-
-          <button class="again-btn btn" id="again-btn" onClick="window.location.reload()">Try Again</button>
-        </div>
-    </div>
+   
 
     <footer>Open source code by <a href="https://github.com/SarahAllison92" class="git-link">Sarah Allison</a></footer>
 
