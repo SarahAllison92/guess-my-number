@@ -41,14 +41,15 @@
 
         <div class="col display-5 mt-5" id="msg">
           Start Guessing....
-            <div class="number" id="number">20</div>
+            <div class="number" id="number">?</div>
         </div>
       
 
         <div class="col mt-4">
-          <p class="score" id="score">Score: <span id="score-num">20</span>  </p>
-          <p class="high-score" id="high-score"><i class="bi bi-award"></i> High Score: <span id="high-score-num">30</span></p>
-          <button class="again-btn btn" id="again-btn">Try Again</button>
+          <p class="score display-6" id="score">Score: <span id="score-num">20</span>  </p>
+          <p class="high-score display-6 mt-4 mb-4" id="high-score"><i class="bi bi-award"></i> High Score: <span id="high-score-num">30</span></p>
+
+          <button class="again-btn btn" id="again-btn" onClick="document.location.reload()">Try Again</button>
         </div>
     </div>
 
