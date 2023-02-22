@@ -1,8 +1,7 @@
 "use strict";
 
-const secretNumber = Math.round(Math.random() * 30);
+const secretNumber = Math.round(Math.random() * 20);
 let score = 20;
-document.querySelector("#number").textContent = secretNumber;
 
 function onClick1() {
   const guess = Number(document.querySelector("#number-input").value);
@@ -28,6 +27,8 @@ function onClick1() {
     check.style.color = "#000";
     again.style.backgroundColor = "#6EFDA5";
     again.style.color = "#000";
+
+    document.querySelector("#number").textContent = secretNumber;
   } else if (guess > secretNumber) {
     if (score > 1) {
       msg.textContent = "Sorry, That's too high ...";
@@ -43,6 +44,14 @@ function onClick1() {
       scoreNum.textContent = score;
     } else {
       msg.textContent = "You lose the game, Sorry";
+      head.style.backgroundColor = "#BE3825";
+      h1.style.color = "#000";
+      h2.style.color = "#000";
+      head.style.color = "#000";
+      check.style.backgroundColor = "#BE3825";
+      check.style.color = "#000";
+      again.style.backgroundColor = "#BE3825";
+      again.style.color = "#000";
     }
   }
 }
